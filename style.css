@@ -1,0 +1,157 @@
+.dropdown-menu {
+    min-width: 60px !important;
+  }
+
+.title{
+    background-color: #212529;
+    
+}
+h1{
+    font-family: 'Noto Sans Mono', monospace;
+    color: white;
+    font-size: 3rem;
+   
+}
+
+h2{
+    font-family: 'Noto Sans Mono', monospace;
+    color: rgb(0, 0, 0);
+    font-size: 3rem;
+   
+}
+
+
+.container-fluid{
+padding: 0% 3%;
+}
+
+.f{
+  margin-top:20px;
+}
+
+.chart {
+  padding: 20px;
+}
+
+table {
+  width: 40%;
+  height: 400px;
+}
+
+.charttitle {
+  text-align: center;
+}
+
+.bars td {
+  vertical-align: bottom;
+}
+
+.bars div:hover {
+  opacity: 0.6;
+}
+
+.legend {
+  vertical-align: bottom;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.legbox {
+  display: block;
+  clear: both;
+}
+
+.xaxisname {
+  margin: 5px;
+  color: #fff;
+  font-size: 77%;
+  padding: 5px;
+  float: left;
+}
+
+
+/*Flat UI colors*/
+
+#one {
+  background: #16A085;
+}
+
+#two {
+  background: #2ECC71;
+}
+
+#three {
+  background: #27AE60;
+}
+
+#four {
+  background: #3498DB;
+}
+
+#five {
+  background: #2980B9;
+}
+
+#six {
+  background: #9B59B6;
+}
+
+#seven {
+  background: #8E44AD;
+}
+
+#eight {
+  background: #34495E;
+}
+
+#nine {
+  background: #2C3E50;
+}
+
+#ten {
+  background: #22313f;
+}
+
+#eleven {
+  background: #F1C40F;
+}
+
+#twelve {
+  background: #F39C12;
+}
+
+#thirteen {
+  background: #E67E22;
+}
+
+#fourteen {
+  background: #D35400;
+}
+
+#fifteen {
+  background: #E74C3C;
+}
+
+#sixteen {
+  background: #C0392B;
+}
+
+#seventeen {
+  background: #ECF0F1;
+}
+
+#seventeen.clouds {
+  color: #BDC3C7;
+}
+
+#eighteen {
+  background: #BDC3C7;
+}
+
+#nineteen {
+  background: #95A5A6;
+}
+
+#twenty {
+  background: #7F8C8D;
+}

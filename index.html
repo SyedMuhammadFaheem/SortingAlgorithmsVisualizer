@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algo Visualisation</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <section class="title">
+        <div class="container-fluid">
+
+            <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark py-4">
+                <div class="container-fluid">
+                    <img src="images/4030.png" alt="Bootstrap" width="30" height="24">
+                    <a class="navbar-brand" href="#">FI-ALGOS.com</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse text-bg-dark" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Sortings
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#insertion-sort" class="dropdown-item" href="#">Insertion</a></li>
+                                    <li><a href="#merge-sort" class="dropdown-item" href="#">Merge</a></li>
+                                    <li><a href="#bubble-sort" class="dropdown-item" href="#">Bubble</a></li>
+                                    <li><a href="#heap-sort" class="dropdown-item" href="#">Heap</a></li>
+                                    <li><a href="#quick-sort" class="dropdown-item" href="#">Quick</a></li>
+                                    <li><a href="#radix-sort" class="dropdown-item" href="#">Radix</a></li>
+                                    <li><a href="#bucket-sort" class="dropdown-item" href="#">Bucket</a></li>
+                                    <li><a href="#counting-sort" class="dropdown-item" href="#">Counting</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="row">
+                <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                    <h1>We Sort it<br> for you!</h1>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/algo2.png" style=" height: 400px; width: 500px; border-radius: 20px;" alt="">
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label text-white">Input file containing elements of array</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="insertion-sort"class="sorting">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                    <h2>Insertion<br> Sort</h2>
+                </div>
+                <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                    <div class="chart"></div>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                    <button id='ins-btn' type="button" class="btn btn-success">Start Sorting</button>
+                </div>
+            </div>
+        </div>
+        </section>
+        
+        <hr class="mt-2 mb-3"/>
+        <section id="merge-sort" class="sorting">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                        <h2>Merge<br> Sort</h2>
+                    </div>
+                    <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                        <div class="chart"></div>
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                        <button type="button" class="btn btn-success">Start Sorting</button>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            
+            <hr class="mt-2 mb-3"/>
+            <section id="bubble-sort" class="sorting">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                            <h2>Bubble<br> Sort</h2>
+                        </div>
+                        <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                            <div class="chart"></div>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                            <button type="button" class="btn btn-success">Start Sorting</button>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+
+
+
+                <hr class="mt-2 mb-3"/>
+                <section id="heap-sort"  class="sorting">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                <h2>Heap<br> Sort</h2>
+                            </div>
+                            <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                <div class="chart"></div>
+                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                <button type="button" class="btn btn-success">Start Sorting</button>
+                            </div>
+                        </div>
+                    </div>
+                    </section>
+
+
+
+                    <hr id="quick-sort" class="mt-2 mb-3"/>
+                    <section class="sorting">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                    <h2>Quick<br> Sort</h2>
+                                </div>
+                                <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                    <div class="chart"></div>
+                                    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                    <button type="button" class="btn btn-success">Start Sorting</button>
+                                </div>
+                            </div>
+                        </div>
+                        </section>
+
+
+
+                        <hr class="mt-2 mb-3"/>
+
+                        <section id="radix-sort" class="sorting">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                        <h2>Radix<br> Sort</h2>
+                                    </div>
+                                    <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                        <div class="chart"></div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                        <button type="button" class="btn btn-success">Start Sorting</button>
+                                    </div>
+                                </div>
+                            </div>
+                            </section>
+
+
+
+                            <hr class="mt-2 mb-3"/>
+                            <section id="counting-sort" class="sorting">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                            <h2>Counting<br> Sort</h2>
+                                        </div>
+                                        <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                            <div class="chart"></div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                            <button type="button" class="btn btn-success">Start Sorting</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                </section>
+
+
+                                <hr id="bucket-sort" class="mt-2 mb-3"/>
+                                <section class="sorting">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                                <h2>Bucket<br> Sort</h2>
+                                            </div>
+                                            <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                                <div class="chart"></div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                                <button type="button" class="btn btn-success">Start Sorting</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </section>
+
+
+
+<div id="fileOutput" ></div>
+
+        <!-- Footer -->
+<footer class="bg-dark text-center text-white f">
+    <!-- Grid container -->
+    <div class="container p-4">
+    
+      <section class="">
+        <form action="">
+          <div class="row d-flex justify-content-center">
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Sign up for queries</strong>
+              </p>
+            </div>
+  
+            <div class="col-md-5 col-12">
+
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example21" class="form-control" />
+                <label class="form-label" for="form5Example21">Email address</label>
+              </div>
+            </div>
+        
+            <div class="col-auto">
+              <button type="submit" class="btn btn-outline-light mb-4">
+                Sign up
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <section class="mb-4">
+        <p>
+          <b>"Programming is the art of algorithm design and the craft of debugging errant code..."</b> 
+        </p>
+      </section>
+     
+    </div>
+    <div id='footer' class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright: All rights are reserved!
+    </div>
+  </footer>
+                                     
+                                <script
+                                    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+                                    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+                                    crossorigin="anonymous"></script>
+                                <script src="script.js"></script>
+</body>
+
+</html>
