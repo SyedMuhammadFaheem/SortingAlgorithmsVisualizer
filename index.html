@@ -18,10 +18,10 @@
     <section class="title">
         <div class="container-fluid">
 
-            <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark py-4">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark py-4">
                 <div class="container-fluid">
-                    <img src="images/4030.png" alt="Bootstrap" width="30" height="24">
-                    <a class="navbar-brand" href="#">FI-ALGOS.com</a>
+                    <img src="./images/4030.png" alt="Bootstrap" width="30" height="24">
+                    <a class="navbar-brand" href="index.html">FI-ALGOS</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -46,6 +46,8 @@
                                     <li><a href="#radix-sort" class="dropdown-item" href="#">Radix</a></li>
                                     <li><a href="#bucket-sort" class="dropdown-item" href="#">Bucket</a></li>
                                     <li><a href="#counting-sort" class="dropdown-item" href="#">Counting</a></li>
+                                    <li><a href="#book1-sort" class="dropdown-item" href="#">Book 1</a></li>
+                                    <li><a href="#book2-sort" class="dropdown-item" href="#">Book 2</a></li>
                                 </ul>
                             </li>
 
@@ -57,157 +59,237 @@
             </nav>
 
 
-            <div class="row">
-                <div class="col-lg-6 align-items-center d-flex justify-content-center">
-                    <h1>We Sort it<br> for you!</h1>
-                </div>
-                <div class="col-lg-6">
-                    <img src="images/algo2.png" style=" height: 400px; width: 500px; border-radius: 20px;" alt="">
-                </div>
-
+         
+    </section>
+    <section class="bg-dark py-lg-5">
+        <div class="row">
+            <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                <h1>We Sort it<br> for you!</h1>
+            </div>
+            <div class="col-lg-6">
+                <img src="./images/algo2.png" style=" height: 400px; width: 500px; border-radius: 20px;" alt="">
             </div>
 
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="mb-3">
-                        <label for="formFile" class="form-label text-white">Input file containing elements of array</label>
-                        <input class="form-control" type="file" id="formFile">
-                    </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="mb-3">
+                    <label for="formFile" class="form-label text-white">Input file containing elements of array</label>
+                    <input class="form-control" type="file" id="formFile">
                 </div>
             </div>
         </div>
-        </div>
+    </div>
+    </div>
     </section>
 
     <section id="insertion-sort"class="sorting">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 align-items-center d-flex justify-content-center">
-                    <h2>Insertion<br> Sort</h2>
+                    <h2>Insertion Sort</h2>
                 </div>
-                <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                <div class="col-lg-6 align-items-center d-flex justify-content-center" >   
+                <div class="card white border-0" style="width: 18rem;">
+                    <div class="text-center">
+                      <div class="card-body white border-0">
+                        <h5 class="card-title">Time Complexity</h5>
+                        <p class="card-text">Time Taken:<div id="insertionTime"></div></p>
+                      </div> 
+                      </div>
+                    </div>
+                </div>   
+            </div>
+            <div class="row">
+                <div class="col-lg-12 align-items-center d-flex justify-content-center">
                     <div class="chart"></div>
-                    
+                   
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 align-items-center d-flex justify-content-center">
-                    <button id='ins-btn' type="button" class="btn btn-success">Start Sorting</button>
+                <div class="col-lg-12 align-items-center d-flex justify-content-center">
+                    <button type="button" class="btn btn-success" id="ins-btn">Start Sorting</button>
                 </div>
-                <span id='ins-time' class="time"=></span>
             </div>
         </div>
         </section>
         
         <hr class="mt-2 mb-3"/>
-        <section id="merge-sort" class="sorting">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6 align-items-center d-flex justify-content-center">
-                        <h2>Merge<br> Sort</h2>
-                    </div>
-                    <div class="col-lg-6 align-items-center d-flex justify-content-center">
-                        <div class="chart"></div>
-                        
-                    </div>
+
+         <section id="merge-sort"class="sorting">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                    <h2>Merge Sort</h2>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6 align-items-center d-flex justify-content-center">
-                        <button id='merge-btn' type="button" class="btn btn-success">Start Sorting</button>
+                <div class="col-lg-6 align-items-center d-flex justify-content-center" >   
+                <div class="card white border-0" style="width: 18rem;">
+                    <div class="text-center">
+                      <div class="card-body white border-0">
+                        <h5 class="card-title">Time Complexity</h5>
+                        <p class="card-text">Time Taken:<div id="mergeTime"></div></p>
+                      </div> 
+                      </div>
                     </div>
-                    <span id='merge-time' class="time"></span>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-lg-12 align-items-center d-flex justify-content-center">
+                    <div class="chart"></div>
+                    
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 align-items-center d-flex justify-content-center">
+                    <button type="button" class="btn btn-success" id="merge-btn">Start Sorting</button>
                 </div>
-            </section>
+            </div>
+        </div>
+        </section>
 
             
             <hr class="mt-2 mb-3"/>
+
+            
             <section id="bubble-sort" class="sorting">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-6 align-items-center d-flex justify-content-center">
-                            <h2>Bubble<br> Sort</h2>
+                            <h2>Bubble Sort</h2>
                         </div>
-                        <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                        <div class="col-lg-6 align-items-center d-flex justify-content-center" >    
+                        <div class="card white border-0" style="width: 18rem;">
+                            <div class="text-center">
+                              <div class="card-body white border-0">
+                                <h5 class="card-title">Time Complexity</h5>
+                                <p class="card-text">Time Taken:<div id="bubbleTime"></div></p>
+                              </div> 
+                              </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 align-items-center d-flex justify-content-center">
                             <div class="chart"></div>
                             
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-6 align-items-center d-flex justify-content-center">
-                            <button type="button" id='bub-btn' class="btn btn-success">Start Sorting</button>
+                        <div class="col-lg-12 align-items-center d-flex justify-content-center">
+                            <button type="button" class="btn btn-success" id="bub-btn">Start Sorting</button>
                         </div>
-                        <span id='bub-time' class="time"></span>
                     </div>
-                    </div>
+                </div>
                 </section>
 
 
 
                 <hr class="mt-2 mb-3"/>
-                <section id="heap-sort"  class="sorting">
+
+                <section id="heap-sort" class="sorting">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-lg-6 align-items-center d-flex justify-content-center">
-                                <h2>Heap<br> Sort</h2>
+                                <h2>Heap Sort</h2>
                             </div>
-                            <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                            <div class="col-lg-6 align-items-center d-flex justify-content-center" >    
+                            <div class="card white border-0" style="width: 18rem;">
+                                <div class="text-center">
+                                  <div class="card-body white border-0">
+                                    <h5 class="card-title">Time Complexity</h5>
+                                    <p class="card-text">Time Taken:<div id="heapTime"></div></p>
+                                  </div> 
+                                  </div>
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 align-items-center d-flex justify-content-center">
                                 <div class="chart"></div>
                                 
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 align-items-center d-flex justify-content-center">
-                                <button id='heap-btn' type="button" class="btn btn-success">Start Sorting</button>
+                            <div class="col-lg-12 align-items-center d-flex justify-content-center">
+                                <button type="button" class="btn btn-success" btn="heap-btn">Start Sorting</button>
                             </div>
-                            <span id='heap-time' class="time"></span>
                         </div>
                     </div>
                     </section>
 
 
+                    <hr    class="mt-2 mb-3"/>
 
-                    <hr id="quick-sort" class="mt-2 mb-3"/>
-                    <section class="sorting">
+
+                    <section id="quick-sort" class="sorting">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-lg-6 align-items-center d-flex justify-content-center">
-                                    <h2>Quick<br> Sort</h2>
+                                    <h2>Quick Sort</h2>
                                 </div>
-                                <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                <div class="col-lg-6 align-items-center d-flex justify-content-center" >   
+                                <div class="card white border-0" style="width: 18rem;">
+                                    <div class="text-center">
+                                      <div class="card-body white border-0">
+                                        <h5 class="card-title">Time Complexity</h5>
+                                        <p class="card-text">Time Taken:<div id="quickTime"></div></p>
+                                      </div> 
+                                      </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 align-items-center d-flex justify-content-center">
                                     <div class="chart"></div>
                                     
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-6 align-items-center d-flex justify-content-center">
-                                    <button id="quick-btn" type="button" class="btn btn-success">Start Sorting</button>
+                                <div class="col-lg-12 align-items-center d-flex justify-content-center">
+                                    <button type="button" class="btn btn-success">Start Sorting</button>
                                 </div>
-                                <span id='quick-time' class="time"></span>
                             </div>
                         </div>
                         </section>
 
-
+ 
 
                         <hr class="mt-2 mb-3"/>
 
-                        <section id="radix-sort" class="sorting">
+                        <section id="count-sort" class="sorting">
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-lg-6 align-items-center d-flex justify-content-center">
-                                        <h2>Radix<br> Sort</h2>
+                                        <h2>Count Sort</h2>
+                                        </div>
+                                     <div class="col-lg-6 align-items-center d-flex justify-content-center" >      
+                                        <div class="card white border-0" style="width: 18rem;">
+                                            <div class="text-center">
+                                              <div class="card-body white border-0">
+                                                <h5 class="card-title">Time Complexity</h5>
+                                                <p class="card-text">Time Taken:<div id="countTime"></div></p>
+                                              </div> 
+                                              </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                <div class="row">
+                                    <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                        <div class="chart"></div>
+                                        
+                                    </div>
+
                                     <div class="col-lg-6 align-items-center d-flex justify-content-center">
                                         <div class="chart"></div>
                                         
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-6 align-items-center d-flex justify-content-center">
-                                        <button id="radix-btn" type="button" class="btn btn-success">Start Sorting</button>
+                                    <div class="col-lg-12 align-items-center d-flex justify-content-center">
+                                        <button type="button" class="btn btn-success" id="count-btn">Start Sorting</button>
                                     </div>
-                                    <span id='radix-time' class="time"></span>
                                 </div>
                             </div>
                             </section>
@@ -215,54 +297,141 @@
 
 
                             <hr class="mt-2 mb-3"/>
-                            <section id="counting-sort" class="sorting">
+                            <section id="radix-sort" class="sorting">
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-lg-6 align-items-center d-flex justify-content-center">
-                                            <h2>Counting<br> Sort</h2>
+                                            <h2>Radix Sort</h2>
                                         </div>
+
                                         <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                        <div class="card white border-0" style="width: 18rem;">
+                                            <div class="text-center">
+                                              <div class="card-body white border-0">
+                                                <h5 class="card-title">Time Complexity</h5>
+                                                <p class="card-text">Time Taken:<div id="radixTime"></div></p>
+                                              </div> 
+                                              </div>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 align-items-center d-flex justify-content-center">
                                             <div class="chart"></div>
                                             
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-6 align-items-center d-flex justify-content-center">
-                                            <button id="count-btn" type="button" class="btn btn-success">Start Sorting</button>
+                                        <div class="col-lg-12 align-items-center d-flex justify-content-center">
+                                            <button type="button" class="btn btn-success">Start Sorting</button>
                                         </div>
-                                        <span id='count-time' class="time"></span>
                                     </div>
                                 </div>
                                 </section>
 
-
-                                <hr id="bucket-sort" class="mt-2 mb-3"/>
-                                <section class="sorting">
+                                <hr class="mt-2 mb-3"/>
+                                <section id="bucket-sort"class="sorting">
                                     <div class="container-fluid">
                                         <div class="row">
                                             <div class="col-lg-6 align-items-center d-flex justify-content-center">
-                                                <h2>Bucket<br> Sort</h2>
+                                                <h2>Bucket Sort</h2>
                                             </div>
                                             <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                            <div class="card white border-0" style="width: 18rem;">
+                                                <div class="text-center">
+                                                  <div class="card-body white border-0">
+                                                    <h5 class="card-title">Time Complexity</h5>
+                                                    <p class="card-text">Time Taken:<div id="bucketTime"></div></p>
+                                                  </div> 
+                                                  </div>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 align-items-center d-flex justify-content-center">
                                                 <div class="chart"></div>
                                                 
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-lg-6 align-items-center d-flex justify-content-center">
-                                                <button id="buck-btn" type="button" class="btn btn-success">Start Sorting</button>
+                                            <div class="col-lg-12 align-items-center d-flex justify-content-center">
+                                                <button type="button" class="btn btn-success">Start Sorting</button>
                                             </div>
-                                            <span id='buck-time' class="time"></span>
+                                        </div>
+                                    </div>
+                                    </section>
+
+                                    <hr class="mt-2 mb-3"/>
+                                <section id="book1-sort"class="sorting">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                                <h2>Book wali Sort</h2>
+                                            </div>
+                                            <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                            <div class="card white border-0" style="width: 18rem;">
+                                                <div class="text-center">
+                                                  <div class="card-body white border-0">
+                                                    <h5 class="card-title">Time Complexity</h5>
+                                                    <p class="card-text">Time Taken:<div id="book1Time"></div></p>
+                                                  </div> 
+                                                  </div>
+                                                </div>
+                                            </div>   
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 align-items-center d-flex justify-content-center">
+                                                <div class="chart"></div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 align-items-center d-flex justify-content-center">
+                                                <button type="button" class="btn btn-success">Start Sorting</button>
+                                            </div>
                                         </div>
                                     </div>
                                     </section>
 
 
+                                    <hr class="mt-2 mb-3"/>
+                                <section id="book2-sort"class="sorting">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                                <h2>Book wali Sort</h2>
+                                            </div>
+                                            <div class="col-lg-6 align-items-center d-flex justify-content-center">
+                                            <div class="card white border-0" style="width: 18rem;">
+                                                <div class="text-center">
+                                                  <div class="card-body white border-0">
+                                                    <h5 class="card-title">Time Complexity</h5>
+                                                    <p class="card-text">Time Taken:<div id="book2Time"></div></p>
+                                                  </div> 
+                                                  </div>
+                                                </div>
+
+                                               </div> 
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 align-items-center d-flex justify-content-center">
+                                                <div class="chart"></div>
+                                                
+                                            </div>
+                                        </div>  
+                                        <div class="row">
+                                            <div class="col-lg-12 align-items-center d-flex justify-content-center">
+                                                <button type="button" class="btn btn-success">Start Sorting</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </section>
+
 
 <div id="fileOutput" ></div>
 
         <!-- Footer -->
-<footer class="bg-dark text-center text-white f">
+<footer class="bg-dark text-center text-white">
     <!-- Grid container -->
     <div class="container p-4">
     
@@ -299,7 +468,7 @@
       </section>
      
     </div>
-    <div id='footer' class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2020 Copyright: All rights are reserved!
     </div>
   </footer>

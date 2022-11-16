@@ -20,18 +20,15 @@ h2{
    
 }
 
-.time
-{
-  margin-left:70%;
+.form-label,.form-control{
+  margin-left: 8px;
 }
 
 .container-fluid{
 padding: 0% 3%;
 }
 
-.f{
-  margin-top:20px;
-}
+
 
 .chart {
   padding: 20px;
@@ -76,86 +73,86 @@ table {
 
 /*Flat UI colors*/
 
-#one {
+.one {
   background: #16A085;
 }
 
-#two {
+.two {
   background: #2ECC71;
 }
 
-#three {
+.three {
   background: #27AE60;
 }
 
-#four {
+.four {
   background: #3498DB;
 }
 
-#five {
+.five {
   background: #2980B9;
 }
 
-#six {
+.six {
   background: #9B59B6;
 }
 
-#seven {
+.seven {
   background: #8E44AD;
 }
 
-#eight {
+.eight {
   background: #34495E;
 }
 
-#nine {
+.nine {
   background: #2C3E50;
 }
 
-#ten {
+.ten {
   background: #22313f;
 }
 
-#eleven {
+.eleven {
   background: #F1C40F;
 }
 
-#twelve {
+.twelve {
   background: #F39C12;
 }
 
-#thirteen {
+.thirteen {
   background: #E67E22;
 }
 
-#fourteen {
+.fourteen {
   background: #D35400;
 }
 
-#fifteen {
+.fifteen {
   background: #E74C3C;
 }
 
-#sixteen {
+.sixteen {
   background: #C0392B;
 }
 
-#seventeen {
+.seventeen {
   background: #ECF0F1;
 }
 
-#seventeen.clouds {
+.seventeen.clouds {
   color: #BDC3C7;
 }
 
-#eighteen {
+.eighteen {
   background: #BDC3C7;
 }
 
-#nineteen {
+.nineteen {
   background: #95A5A6;
 }
 
-#twenty {
+.twenty {
   background: #7F8C8D;
 }
