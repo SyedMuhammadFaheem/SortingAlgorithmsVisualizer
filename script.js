@@ -260,7 +260,9 @@ let sortBarChart = async (data, sortID) => {
     document.getElementById("quickTime").innerHTML = String(time) + " seconds";
   } else if (sortID == 10) {
     count = 0;
-    bookRangeSort(data);
+    rangeLow = Math.floor(Math.random() * (data.length));
+    rangeHigh = Math.floor(Math.random() * (data.length))+(data.length-rangeLow);
+    bookRangeSort(data, rangeLow, rangeHigh);
   }
 };
 
@@ -296,7 +298,6 @@ var insertionSort = async (data) => {
 };
 
 var merge = async (data, low, mid, high) => {
-  console.log("merge");
   var i = low,
     j = mid + 1,
     k = low;
@@ -581,7 +582,39 @@ var bookQuickSort = async (data, low, high, k) => {
   }
 };
 
-var bookRangeSort = (data) => {};
+var bookRangeSort = async (data, rangeLow, rangeHigh) => {
+  console.log(rangeHigh)
+  console.log(rangeLow)
+  rangeHigh=4
+  rangeLow=0
+  start = Date.now();
+  var max = Math.max(...data);
+  var countArr = new Array(max + 1).fill(0);
+  countModBarChart(countArr, 11);
+
+  for (var i = 0; i < data.length; i++) {
+    ++countArr[data[i]];
+    await sleep(150);
+    countModBarChart(countArr, 11);
+  }
+  for (var i = 1; i< max + 1; i++) {
+    countArr[i] = countArr[i] + countArr[i - 1];
+    await sleep(150);
+    countModBarChart(countArr, 11);
+  }
+  console.log(countArr);
+  var answer = countArr[rangeHigh] - countArr[rangeLow];
+  console.log(countArr[rangeHigh])
+  console.log(countArr[rangeLow])
+  end = Date.now();
+  time = end - start;
+  time = time / 1000;
+  time = time - count * (150 / 1000);
+  time = time.toPrecision(5);
+  document.getElementById("book2Time").innerHTML = String(time) + " seconds";
+  var result = document.getElementById("nums");
+  result.innerHTML = String(answer);
+};
 
 let insBtn = document.getElementById("ins-btn");
 
