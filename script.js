@@ -72,8 +72,9 @@ function barChart(data) {
   for (var i = 0; i < 12; i++)
     document.getElementsByClassName("chart")[i].innerHTML = chart.outerHTML;
 }
-
+var countChart=0;
 var modBarChart = (data, index) => {
+  var st=Date.now();
   var chart = document.createElement("div");
 
   var barchart = document.createElement("table");
@@ -124,9 +125,12 @@ var modBarChart = (data, index) => {
   barchart.appendChild(legendrow);
   chart.appendChild(barchart);
   document.getElementsByClassName("chart")[index].innerHTML = chart.outerHTML;
+  var en=Date.now();
+  countChart+=countChart*(en-st);
 };
-
+var countCount1=0;
 var countModBarChart = (data, index) => {
+  var s=Date.now();
   var chart = document.createElement("div");
 
   var barchart = document.createElement("table");
@@ -177,6 +181,8 @@ var countModBarChart = (data, index) => {
   barchart.appendChild(legendrow);
   chart.appendChild(barchart);
   document.getElementsByClassName("chart")[index].innerHTML = chart.outerHTML;
+  var e=Date.now();
+  countCount1+=countCount1*(e-s);
 };
 
 var defaultArr = [82, 23, 75, 53, 32, 24];
@@ -213,6 +219,7 @@ let sortBarChart = async (data, sortID) => {
     time = end - start;
     time = time / 1000;
     time = time - count * (150 / 1000);
+    time=time-countChart;
     time = time.toPrecision(5);
     document.getElementById("mergeTime").innerHTML = String(time) + " seconds";
   } else if (sortID == 3) {
@@ -227,6 +234,7 @@ let sortBarChart = async (data, sortID) => {
     time = end - start;
     time = time / 1000;
     time = time - count * (150 / 1000);
+    time=time-countChart;
     time = time.toPrecision(5);
     document.getElementById("heapTime").innerHTML = String(time) + " seconds";
   } else if (sortID == 5) {
@@ -237,6 +245,7 @@ let sortBarChart = async (data, sortID) => {
     time = end - start;
     time = time / 1000;
     time = time - count * (150 / 1000);
+    time=time-countChart;
     time = time.toPrecision(5);
     document.getElementById("quickTime").innerHTML = String(time) + " seconds";
   } else if (sortID == 6) {
@@ -256,6 +265,7 @@ let sortBarChart = async (data, sortID) => {
     time = end - start;
     time = time / 1000;
     time = time - count * (150 / 1000);
+    time=time-countChart;
     time = time.toPrecision(5);
     document.getElementById("quickTime").innerHTML = String(time) + " seconds";
   } else if (sortID == 10) {
@@ -292,6 +302,7 @@ var insertionSort = async (data) => {
   time = end - start;
   time = time / 1000;
   time = time - count * (150 / 1000);
+  time=time-countChart;
   time = time.toPrecision(5);
   document.getElementById("insertionTime").innerHTML =
     String(time) + " seconds";
@@ -301,7 +312,7 @@ var merge = async (data, low, mid, high) => {
   var i = low,
     j = mid + 1,
     k = low;
-  var arr = new Array(100);
+  var arr = new Array(data.length);
   while (i <= mid && j <= high) {
     if (Number(data[i]) < Number(data[j])) arr[k++] = data[i++];
     else arr[k++] = data[j++];
@@ -317,7 +328,7 @@ var merge = async (data, low, mid, high) => {
 
 var mergeSort = async (data, low, high) => {
   if (low < high) {
-    var mid = Number((low + high) / 2);
+    var mid = parseInt((low + high) / 2);
     await mergeSort(data, low, mid);
     await mergeSort(data, mid + 1, high);
     await merge(data, low, mid, high);
@@ -452,6 +463,8 @@ var radixSort = async (data) => {
   time = end - start;
   time = time / 1000;
   time = time - count * (150 / 1000);
+  time=time-countChart;
+  time=time-countCount1;
   time = time.toPrecision(5);
   document.getElementById("radixTime").innerHTML = String(time) + " seconds";
 };
@@ -481,6 +494,8 @@ var countSort = async (data) => {
   time = time / 1000;
   time = time - count * (0.5 / 1000);
   time = time - count * (150 / 1000);
+  time=time-countChart;
+  time=time-countCount1;
   time = time.toPrecision(5);
   document.getElementById("countTime").innerHTML = String(time) + " seconds";
 };
@@ -611,6 +626,7 @@ var bookRangeSort = async (data, rangeLow, rangeHigh) => {
   time = time / 1000;
   time = time - count * (150 / 1000);
   time = time.toPrecision(5);
+  time=time-countCount1;
   document.getElementById("book2Time").innerHTML = String(time) + " seconds";
   var result = document.getElementById("nums");
   result.innerHTML = String(answer);
