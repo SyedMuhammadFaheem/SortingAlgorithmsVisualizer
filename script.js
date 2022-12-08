@@ -392,7 +392,6 @@ var heapify = async (data, N, i) => {
 };
 
 var Partition = async (data, low, high) => {
-  console.log("hell");
   var pivot = data[low];
   var i = low + 1;
   var j = high;
@@ -408,7 +407,6 @@ var Partition = async (data, low, high) => {
   [data[low], data[j]] = [data[j], data[low]];
   await sleep(150);
   modBarChart(data, 4);
-  console.log(data);
   return j;
 };
 
