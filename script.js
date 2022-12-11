@@ -338,7 +338,6 @@ var bubbleSort = async (data) => {
   start = Date.now();
   for (var i = 0; i < data.length; i++) {
     for (var j = 0; j < data.length - i - 1; j++) {
-      count += 1;
       await sleep(150);
       if (Number(data[j]) > Number(data[j + 1])) {
         [data[j], data[j + 1]] = [data[j + 1], data[j]];
@@ -512,6 +511,7 @@ var insertion = (arr) => {
 };
 
 var bucketSort = async (data) => {
+  start = Date.now();
   if (data.length <= 0) return;
 
   let buckets = new Array(data.length);
@@ -531,10 +531,18 @@ var bucketSort = async (data) => {
 
   for (let i = 0; i < data.length; i++) {
     for (let j = 0; j < buckets[i].length; j++) {
+      data[i] = buckets[i][j];
       await sleep(150);
       modBarChart(data, 9);
     }
   }
+  end = Date.now();
+  time = end - start;
+  time = time / 1000;
+  time = time - count * (150 / 1000);
+  time = time - countChart;
+  time = time.toPrecision(5);
+  document.getElementById("bucketTime").innerHTML = String(time) + " seconds";
 };
 
 var insSort = async (data, low, high) => {
