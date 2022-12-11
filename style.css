@@ -1,31 +1,33 @@
 .dropdown-menu {
-    min-width: 60px !important;
-  }
-
-.title{
-    background-color: #212529;
-    
-}
-h1{
-    font-family: 'Noto Sans Mono', monospace;
-    color: white;
-    font-size: 3rem;
-   
+  min-width: 60px !important;
 }
 
-h2{
-    font-family: 'Noto Sans Mono', monospace;
-    color: rgb(0, 0, 0);
-    font-size: 3rem;
-   
+.title {
+  background-color: #212529;
+
 }
 
-.form-label,.form-control{
+h1 {
+  font-family: 'Noto Sans Mono', monospace;
+  color: white;
+  font-size: 3rem;
+
+}
+
+h2 {
+  font-family: 'Noto Sans Mono', monospace;
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
+
+}
+
+.form-label,
+.form-control {
   margin-left: 8px;
 }
 
-.container-fluid{
-padding: 0% 3%;
+.container-fluid {
+  padding: 0% 3%;
 }
 
 
