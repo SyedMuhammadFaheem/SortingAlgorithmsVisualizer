@@ -528,10 +528,10 @@ var bucketSort = async (data) => {
   for (let i = 0; i < data.length; i++) {
     buckets[i] = insertion(buckets[i]);
   }
-
+  var index=0;
   for (let i = 0; i < data.length; i++) {
     for (let j = 0; j < buckets[i].length; j++) {
-      data[i] = buckets[i][j];
+      data[index++] = buckets[i][j];
       await sleep(150);
       modBarChart(data, 9);
     }
