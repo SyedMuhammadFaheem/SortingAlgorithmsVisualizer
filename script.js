@@ -100,6 +100,9 @@ var modBarChart = (data, index) => {
     } else {
       bar.setAttribute("class", colors[i]);
     }
+    if(index==9)
+    bar.style.height = (data[i]*30) + "px";
+    else
     bar.style.height = data[i] + "px";
     bardata.innerText = data[i];
     bardata.appendChild(bar);
@@ -195,6 +198,7 @@ myFile.addEventListener("change", function() {
   fileReader.onload = function() {
     arrFromFile = JSON.parse(fileReader.result);
     data = arrFromFile.split(",");
+    console.log(data)
     barChart(data);
   };
 
@@ -265,7 +269,7 @@ let sortBarChart = async (data, sortID) => {
     time = time - count * (150 / 1000);
     time = time - countChart;
     time = time.toPrecision(5);
-    document.getElementById("quickTime").innerHTML = String(time) + " seconds";
+    document.getElementById("book1Time").innerHTML = String(time) + " seconds";
   } else if (sortID == 10) {
     count = 0;
     var rangeLow = Math.floor(Math.random() * data.length);
