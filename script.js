@@ -1,3 +1,11 @@
+function checkFileType(input) {
+  if (!input.value.endsWith('.txt')) {
+    alert('Invalid file type. Only text files (.txt) are allowed.');
+    input.value = '';
+  }
+}
+
+
 var colors = [
   "one",
   "two",
