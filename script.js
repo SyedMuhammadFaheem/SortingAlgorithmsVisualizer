@@ -207,10 +207,17 @@ myFile.addEventListener("change", function() {
     arrFromFile = JSON.parse(fileReader.result);
     data = arrFromFile.split(",");
     console.log(data)
-    barChart(data);
+    check = true;
+    for (var i = 0; i < data.length; i++) {
+      if (isNaN(data[i])) {
+        alert("Invalid data in file to be sorted!");
+        check = false;
+        break;
+      }
+    if (check) barChart(data);
   };
 
-  fileReader.readAsText(file);
+  if (check) fileReader.readAsText(file);
 });
 
 var start, end, time;
